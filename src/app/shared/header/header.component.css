@@ -1,0 +1,82 @@
+/* Header container */
+.header-wrapper {
+  position: absolute;
+  top: 69px;
+  left: 10px;
+  width: 1420px;
+  height: 110px;
+  background: #FFFFFF;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+  gap: 48px;
+}
+
+/* Left part: logo and text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo image */
+.logo {
+  width: 61px;
+  height: 67px;
+  object-fit: contain;
+}
+
+/* Title container stacks Tamil and English vertically */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tamil Title */
+.title-ta {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 22px;
+  margin: 0;
+  color: #252C37;
+}
+
+/* English Title */
+.title-en {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 22px;
+  margin: 0;
+  color: #252C37;
+  text-align: center;
+}
+
+/* Right side image container */
+.header-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Stalin image */
+.stalin-img {
+  width: 55px;
+  height: 69px;
+  border-radius: 0.88px;
+  object-fit: contain;
+}
+
+/* Red underline bar */
+.underline-bar {
+  position: absolute;
+  top: 179px; /* 69px top + 110px header height */
+  left: 192px;
+  width: 54px;
+  height: 3px;
+  background: #850000;
+  border-radius: 2px 2px 0 0;
+}
