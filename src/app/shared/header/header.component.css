@@ -1,68 +1,208 @@
-/* Header container */
+/* Desktop Header (Default) */
 .header-wrapper {
   position: absolute;
-  top: 69px;
-  left: 10px;
   width: 1420px;
   height: 110px;
+  left: 0px;
+  top: 44px;
   background: #FFFFFF;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.header-content {
+  position: relative;
+  width: 993.09px;
+  height: 70px;
+  left: calc(50% - 993.09px / 2 + 30px);
+  top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+}
+
+.left-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+}
+.logo {
+  position: absolute;
+  left: 0; /* Adjust to fine-tune */
+  top: 0;
+  width: 61px;
+  height: 67px;
+  object-fit: contain;
+}
+
+.stalin-img {
+  position: absolute;
+  right: 0; /* Adjust to fine-tune */
+  top: 0;
+  width: 55px;
+  height: 69px;
+  object-fit: contain;
+  border-radius: 0.88px;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 17.25px;
+  width: 957px;
+  height: 119.25px;
+}
+
+.title-ta,
+.title-en {
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #252C37;
+  margin: 0;
+  text-align: center;
+}
+
+.title-ta {
+  width: 781px;
+}
+
+.title-en {
+  width: 567px;
+}
+
+.right-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 3.78px;
+  width: 55.07px;
+  height: 68.87px;
+}
+
+.stalin-img {
+  width: 55.07px;
+  height: 68.87px;
+  object-fit: contain;
+  border-radius: 0.88px;
+}
+
+/* ✅ Mobile Responsive CSS */
+@media (max-width: 768px) {
+  .header-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    padding: 20px 10px;
+    border-radius: 0;
+  }
+
+  .header-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .title-block {
+    gap: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .title-ta,
+  .title-en {
+    font-size: 18px;
+    line-height: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }/* Outer wrapper */
+.header-wrapper {
+  width: 100%;
+  background: #FFFFFF;
+  padding: 20px 0;
   border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner layout wrapper */
+.header-inner {
+  width: 100%;
+  max-width: 1420px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
   box-sizing: border-box;
-  font-family: 'Cabin', sans-serif;
-  gap: 48px;
+  gap: 30px;
 }
 
-/* Left part: logo and text */
-.header-left {
+/* Left block: logo + text */
+.left-block {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex: 1;
 }
 
-/* Logo image */
+/* Logo */
 .logo {
   width: 61px;
   height: 67px;
   object-fit: contain;
 }
 
-/* Title container stacks Tamil and English vertically */
-.title-container {
+/* Text block */
+.title-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 8px;
 }
 
-/* Tamil Title */
-.title-ta {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 22px;
-  margin: 0;
-  color: #252C37;
-}
-
-/* English Title */
+.title-ta,
 .title-en {
+  font-family: 'Cabin', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 22px;
-  margin: 0;
   color: #252C37;
+  margin: 0;
+}
+
+.title-en {
   text-align: center;
 }
 
-/* Right side image container */
-.header-right {
+/* Right block: Stalin image */
+.right-block {
   display: flex;
   align-items: flex-end;
 }
 
-/* Stalin image */
 .stalin-img {
   width: 55px;
   height: 69px;
@@ -70,13 +210,42 @@
   object-fit: contain;
 }
 
-/* Red underline bar */
-.underline-bar {
-  position: absolute;
-  top: 179px; /* 69px top + 110px header height */
-  left: 192px;
-  width: 54px;
-  height: 3px;
-  background: #850000;
-  border-radius: 2px 2px 0 0;
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  .left-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-ta,
+  .title-en {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .stalin-img {
+    width: 45px;
+    height: 56px;
+  }
+}
+
+
+  .right-block {
+    width: auto;
+    height: auto;
+    justify-content: center;
+  }
+
+  .stalin-img {
+    width: 45px;
+    height: 56px;
+  }
 }

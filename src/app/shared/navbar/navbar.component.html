@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="navbar-container">
+
+    <div class="navbar-toggle"
+         (click)="toggleMenu()"
+         aria-label="Toggle menu"
+         role="button"
+         tabindex="0"
+         (keydown.enter)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <ul class="navbar-links" [class.open]="menuOpen">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About Committee</a></li>
+      <li><a href="#">Previous Committees</a></li>
+      <li><a href="#">Press Releases</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Reference Materials</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="navbar-actions" [class.open]="menuOpen">
+      <button class="btn red">View Questions</button>
+      <button class="btn red">Submit Your Views</button>
+    </div>
+
+  </div>
+</nav>
